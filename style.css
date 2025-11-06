@@ -1,3 +1,4 @@
+html { scroll-behavior: smooth; }
 :root{
   --ink:#4A332D;
   --ink-dim:#4A332D;
@@ -141,6 +142,17 @@ body{
   nav a{font-size:.95rem;}
 
   footer{font-size:.85rem;}
+}
+.details {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease, opacity .25s ease;
+}
+
+.details.show {
+  max-height: 500px;
+  opacity: 1;
 }
 
 
