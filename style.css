@@ -10,13 +10,16 @@ html { scroll-behavior: smooth; }
 *{box-sizing:border-box;}
 html,body{height:100%;}
 
-body {
+.hero{
+  min-height: 100vh;              /* make it visible */
+  display: grid;                  /* optional, centers content nicely */
   background-image: url("images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Makes it stay while scrolling */
+  background-attachment: fixed;
 }
+
 
 body{
   margin:0;
