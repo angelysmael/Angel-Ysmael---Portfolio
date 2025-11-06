@@ -7,6 +7,15 @@ html { scroll-behavior: smooth; }
   --link:#4A332D;
 }
 
+body {
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Makes it stay while scrolling */
+}
+
+
 *{box-sizing:border-box;}
 html,body{height:100%;}
 body{
