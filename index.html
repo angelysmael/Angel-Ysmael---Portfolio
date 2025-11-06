@@ -1,89 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Angel Ysmael — Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angel Ysmael — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- shared header/nav -->
+  <header class="site-header">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">about me!</a></li>
+        <li><a href="cp.html">cp projects!</a></li>
+        <li><a href="vm.html">vm projects!</a></li>
+        <li><a href="contact.html">contact me!</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <body>
-    <header class="site-header">
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="#about">about me!</a></li>
-          <li><a href="#cp">cp projects!</a></li>
-          <li><a href="#vm">vm projects!</a></li>
-          <li><a href="#contact">contact me!</a></li>
-        </ul>
-      </nav>
-    </header>
+  <main>
+    <section id="about">
+      <h1>Angel Ysmael</h1>
+      <h2 class="subtitle">Computer Programming Student and Visual Manager</h2>
+      <p>Welcome to my portfolio! Explore the sections above to see what I’ve been working on.</p>
+    </section>
+  </main>
 
-    <main>
-    
-      <section class="hero">
-        <div class="hero-content">
-          <h1 class="hero-title">Angel <span>Ysmael</span></h1>
-          <p class="hero-subtitle">Computer Programming Student and Visual Manager</p>
-
-          <p class="hero-tagline">
-            Welcome to my portfolio! Explore the sections above to see what I’ve been working on.
-          </p>
-        </div>
-
-        
-        <small class="watermark">2025 Angel Ysmael.</small>
-      </section>
-
-    
-      <section id="about">
-          </section>
-  
-      <section id="cp"></section>
-         <h2 class="section-title">CP Projects</h2>
-      <article class="project-card" data-project="storage">
-  <div class="card-head">
-    <h3 class="project-title">Storage Assignment</h3>
-    <button class="toggle" aria-expanded="false" aria-controls="storage-details">
-      Show details
-    </button>
-  </div>
-
-  <p class="project-kicker">A website that stores user input.</p>
-
-  <div id="storage-details" class="details" hidden>
-    <ul>
-      <li>Tech: HTML, CSS, JavaScript (localStorage)</li>
-      <li>Focus: State saving + data persistence</li>
-      <li><a href="https://angelysmael.github.io/storage-assignment/" target="_blank">View Project</a></li>
-    </ul>
-  </div>
-</article>
-
-      <section id="vm">
-        <h2 class="section-title">VM Projects</h2>
-      <article class="project-card" data-project="vmtool">
-  <div class="card-head">
-    <h3 class="project-title">Visual Merchandising Portfolio</h3>
-    <button class="toggle" aria-expanded="false" aria-controls="vmtool-details">
-      Show details
-    </button>
-  </div>
-
-  <p class="project-kicker">Showcases visual builds + display strategy.</p>
-
-  <div id="vmtool-details" class="details" hidden>
-    <ul>
-      <li>Focus: Brand consistency, zone control, KPI interpretation</li>
-      <li>Includes store openings, layout resets, campaign execution</li>
-      <li><a href="https://www.linkedin.com/in/angel-ysmael-4465212bb/" target="_blank">View Portfolio</a></li>
-    </ul>
-  </div>
-</article>
-      </section>
-      
-      <section id="contact"></section>
-    </main>
-    <script src="script.js" defer></script>
-  </body>
+  <footer>2025 Angel Ysmael.</footer>
+  <script src="script.js" defer></script>
+</body>
 </html>
+

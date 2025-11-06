@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Angel Ysmael</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">about me!</a></li>
+        <li><a href="cp.html">cp projects!</a></li>
+        <li><a href="vm.html">vm projects!</a></li>
+        <li><a href="contact.html">contact me!</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contact">
+      <h2 class="section-title">Contact Me</h2>
+
+      <form id="contact-form" novalidate>
+        <label> Name
+          <input id="name" name="name" type="text" required aria-describedby="name-err">
+        </label>
+        <p id="name-err" class="error" aria-live="polite"></p>
+
+        <label> Email
+          <input id="email" name="email" type="email" required aria-describedby="email-err">
+        </label>
+        <p id="email-err" class="error" aria-live="polite"></p>
+
+        <label> Message
+          <textarea id="message" name="message" rows="5" required minlength="10" aria-describedby="message-err"></textarea>
+        </label>
+        <p id="message-err" class="error" aria-live="polite"></p>
+
+        <button type="submit">Send</button>
+        <p id="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>2025 Angel Ysmael.</footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

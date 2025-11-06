@@ -155,5 +155,13 @@ body{
   opacity: 1;
 }
 
+.projects-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+.project-card { background: #fff7cf; border-radius: 1.25rem; padding:1rem; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+.card-head { display:flex; justify-content:space-between; align-items:center; gap:.75rem; }
+.toggle { border:0; background:#4a3b2f; color:#fff; padding:.45rem .7rem; border-radius:999px; cursor:pointer; }
+.details { opacity:0; max-height:0; overflow:hidden; transition:max-height .25s ease, opacity .25s ease; }
+.details.show { opacity:1; max-height:500px; }
+.error { color:#b00020; margin:.25rem 0 1rem; }
+input[aria-invalid="true"], textarea[aria-invalid="true"] { outline: 2px solid #b00020; }
 
 
