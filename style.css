@@ -11,9 +11,11 @@ html { scroll-behavior: smooth; }
 html,body{height:100%;}
 
 .hero{
-  min-height: 100vh;              /* make it visible */
+  min-height: 100vh;
   display: grid;                  /* optional, centers content nicely */
-  background-image: url("images/background.jpg");
+  background:
+    linear-gradient(rgba(255,240,180,.85), rgba(255,240,180,.85)),
+    url("images/background.jpg") center center / cover no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -62,30 +64,17 @@ body{
   border-bottom-color:currentColor;
 }
 
-.hero{
-  position:relative;
-  min-height:100vh;
-  display:grid;
-  place-items:center;
-  text-align:left;
-  overflow:hidden;
-  background:
-    linear-gradient(rgba(255,240,180,.85), rgba(255,240,180,.85)),
-    url("background.jpg") center center / cover no-repeat;
-}
-
 .hero-content{
   width:min(100%,980px);
   padding:24px;
   margin-inline:18px;
 }
-
-.hero-title{
-  font-size:clamp(2.2rem,4.8vw,3.2rem);
+{
   font-weight:800;
   color:var(--ink);
   margin:0 0 4px;
 }
+
 .hero-title span{opacity:.95;}
 
 .hero-subtitle{
