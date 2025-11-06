@@ -9,6 +9,15 @@ html { scroll-behavior: smooth; }
 
 *{box-sizing:border-box;}
 html,body{height:100%;}
+
+body {
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Makes it stay while scrolling */
+}
+
 body{
   margin:0;
   font-family:system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
