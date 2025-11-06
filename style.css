@@ -129,21 +129,41 @@ body{
     text-align:center;
   }
 }
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+/* Header sits on top; give the hero top padding so it doesn't tuck under */
+:root{
+  --header-h: 80px;  /* adjust if your header gets taller/shorter */
 }
-.hero h1 {
-  font-size: clamp(2rem, 6vw, 4rem);
-  margin-bottom: 16px;
+
+/* Hero layout: full height, left-aligned, comfy padding */
+
+/* Content column width like your original */
+.hero-content{
+  max-width: 920px;                /* keep text in a readable column */
 }
-.hero-subtitle {
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  margin-bottom: 20px;
+
+
+.hero h1{
+  margin: 0 0 12px;
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  font-weight: 800;
 }
-.hero-tagline {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  opacity: 0.95;
+
+.hero-subtitle{
+  margin: 0 0 22px;
+  font-size: clamp(1.1rem, 2.7vw, 2rem);
+  opacity: .95;
+}
+
+.hero-tagline{
+  max-width: 52ch;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: .95;
+}
+
+/* Small screens: reduce top padding so content stays centered */
+@media (max-width: 768px){
+  :root{ --header-h: 64px; }
+  .hero{ padding: 96px 5vw 72px; }
 }
 
 @media (max-width:480px){
