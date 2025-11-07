@@ -1,228 +1,185 @@
+/* ========== Base / Variables ========== */
 html { scroll-behavior: smooth; }
 :root{
+  /* colors */
   --ink:#4A332D;
   --ink-dim:#4A332D;
   --paper:#f5e3a3;
   --paper-deep:#e5c96d;
   --link:#4A332D;
+
+  /* layout */
+  --header-h: 76px;     /* reserved header height */
+  --xpad: 6vw;          /* left/right page padding */
+  --ytop-hero: 120px;   /* top padding for hero */
+  --ytop-page: 110px;   /* top padding for normal pages */
+  --ybot: 84px;         /* bottom padding */
 }
 
-*{box-sizing:border-box;}
-html,body{height:100%;}
-
-.hero{
-  min-height: 100vh;
-  display: grid;                  /* optional, centers content nicely */
-  background:
-    linear-gradient(rgba(255,240,180,.85), rgba(255,240,180,.85)),
-    url("images/background.jpg") center center / cover no-repeat;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 
 body{
-  margin:0;
-  font-family:system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
-  color:var(--ink);
-  background:#fff;
-  line-height:1.35;
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.35;
 }
 
+/* ========== Header / Nav ========== */
 .site-header{
-  position:absolute;
-  top:0;left:0;right:0;
-  z-index:2;
-  padding:12px 18px;
+  position: sticky;     /* keeps header visible when scrolling */
+  top: 0;
+  z-index: 10;
+  padding: 16px var(--xpad);
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: saturate(1.05) blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
 }
 
 .nav-list{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  gap:28px;
-  justify-content:flex-start;
-  align-items:center;
-  flex-wrap:wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav a{
-  text-decoration:none;
-  color:var(--link);
-  font-weight:700;
-  text-transform:lowercase;
-  letter-spacing:.3px;
-  opacity:.9;
-  border-bottom:2px solid transparent;
+  text-decoration: none;
+  color: var(--link);
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: .3px;
+  opacity: .9;
+  border-bottom: 2px solid transparent;
 }
-
 .nav a:hover,
-.nav a:focus{
-  border-bottom-color:currentColor;
+.nav a:focus{ border-bottom-color: currentColor; }
+
+/* ========== Home Hero (index.html only) ========== */
+.hero{
+  min-height: calc(100vh - var(--header-h));
+  padding: var(--ytop-hero) var(--xpad) var(--ybot);
+  display: block;
+  background:
+    linear-gradient(rgba(255,240,180,.88), rgba(255,240,180,.88)),
+    url("images/background.jpg") center / cover no-repeat fixed;
 }
 
-.hero-content{
-  width:min(100%,980px);
-  padding:24px;
-  margin-inline:18px;
+.hero-content{ max-width: 920px; margin: 0 auto; }
+.hero h1{
+  margin: 0 0 12px;
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  font-weight: 800;
 }
-{
-  font-weight:800;
-  color:var(--ink);
-  margin:0 0 4px;
-}
-
-.hero-title span{opacity:.95;}
-
 .hero-subtitle{
-  margin:0 0 20px;
-  font-size:clamp(.95rem,1.5vw,1.05rem);
-  color:var(--ink-dim);
+  margin: 0 0 22px;
+  font-size: clamp(1.1rem, 2.7vw, 2rem);
+  opacity: .95;
 }
-
 .hero-tagline{
-  max-width:46ch;
-  font-size:clamp(.95rem,1.6vw,1.1rem);
-  opacity:.95;
+  max-width: 52ch;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: .95;
 }
 
-.watermark{
-  position:absolute;
-  right:14px;
-  bottom:10px;
-  opacity:.7;
-  font-weight:700;
+/* watermark footer on home (if you use it) */
+.index-footer{
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  font-weight: 700;
+  opacity: .7;
+  color: var(--ink);
 }
 
-@media (max-width:768px){
-  body{
-    padding:10px;
-    text-align:center;
-  }
+/* ========== Normal Pages (cp.html, vm.html, contact.html) ========== */
+.page{
+  padding: var(--ytop-page) var(--xpad) var(--ybot);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.page > h1{
+  margin: 0 0 18px;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+}
+.page p.lead{
+  margin: 0 0 28px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: .95;
+}
 
-  nav ul{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:16px;
-    flex-wrap:wrap;
-  }
+/* ========== Projects Grid / Cards ========== */
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 18px;
+}
+.project-card{
+  background: #fff7cf;
+  border-radius: 1.25rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+.card-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 8px;
+}
+.toggle{
+  border: 0;
+  background: #4a3b2f;
+  color: #fff;
+  padding: .45rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.details{
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease, opacity .25s ease;
+}
+.details.show{
+  opacity: 1;
+  max-height: 500px;
+}
 
-  h1{
-    font-size:2rem;
-    margin-top:60px;
-  }
+/* form errors (contact) */
+.error{ color:#b00020; margin:.25rem 0 1rem; }
+input[aria-invalid="true"],
+textarea[aria-invalid="true"]{ outline: 2px solid #b00020; }
 
-  p{font-size:1rem;}
-
-  .hero-text{
-    max-width:90%;
-    margin:0 auto;
-  }
-
-  /* ===== Footer Style ===== */
+/* ========== Footer ========== */
 .site-footer{
   text-align: right;
-  padding: 20px 6vw 30px;
+  padding: 20px var(--xpad) 30px;
   font-weight: 600;
   opacity: .75;
   font-size: 1rem;
   color: var(--ink);
 }
 
-}
-/* Header sits on top; give the hero top padding so it doesn't tuck under */
-:root{
-  --header-h: 80px;  /* adjust if your header gets taller/shorter */
-}
-
-/* Hero layout: full height, left-aligned, comfy padding */
-
-/* Content column width like your original */
-
-.hero-content{
-  max-width: 920px;
-  margin: 0 auto;
-}
-
-.hero h1{
-  margin: 0 0 12px;
-  font-size: clamp(2.8rem,8vw,5.2rem);
-  font-weight: 800;
-}
-
-.hero-subtitle{
-  margin: 0 0 22px;
-  font-size: clamp(1.1rem,2.7vw,2rem);
-  opacity:.95;
-}
-
-.hero-tagline{
-  max-width: 52ch;
-  font-size: clamp(1rem,2vw,1.25rem);
-  opacity:.95;
-}
-
-
-/* Small screens: reduce top padding so content stays centered */
+/* ========== Responsive Tweaks ========== */
 @media (max-width: 768px){
-  :root{ --header-h: 64px; }
-  .hero{ padding: 96px 5vw 72px; }
-}
-
-@media (max-width:480px){
-  h1{font-size:1.7rem;}
-  p{font-size:.95rem;}
-
-  nav ul{
-    gap:12px;
-    justify-content:center;
-    flex-wrap:wrap;
+  :root{
+    --header-h: 64px;
+    --xpad: 5vw;
+    --ytop-hero: 100px;
+    --ytop-page: 96px;
   }
-
-  nav a{font-size:.95rem;}
-
-
-.details {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .25s ease, opacity .25s ease;
+}
+@media (max-width: 480px){
+  .nav-list{ gap: 12px; }
+  .nav a{ font-size: .95rem; }
 }
 
-.details.show {
-  max-height: 500px;
-  opacity: 1;
-}
-
-.projects-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
-.project-card { background: #fff7cf; border-radius: 1.25rem; padding:1rem; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
-.card-head { display:flex; justify-content:space-between; align-items:center; gap:.75rem; }
-.toggle { border:0; background:#4a3b2f; color:#fff; padding:.45rem .7rem; border-radius:999px; cursor:pointer; }
-.details { opacity:0; max-height:0; overflow:hidden; transition:max-height .25s ease, opacity .25s ease; }
-.details.show { opacity:1; max-height:500px; }
-.error { color:#b00020; margin:.25rem 0 1rem; }
-input[aria-invalid="true"], textarea[aria-invalid="true"] { outline: 2px solid #b00020; }
-
-
-/* NORMAL PAGES (cp.html, vm.html, contact.html) */
-.page{
-  padding: 110px 6vw 84px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.page h1{
-  margin-bottom: 18px;
-  font-size: clamp(1.8rem,4vw,2.6rem);
-  font-weight: 800;
-}
-
-.page p.lead{
-  margin-bottom: 28px;
-  font-size: clamp(1rem,2vw,1.25rem);
-  opacity:.95;
-}
