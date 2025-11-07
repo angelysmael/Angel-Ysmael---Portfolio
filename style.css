@@ -60,21 +60,44 @@ body{
 .nav a:hover,
 .nav a:focus{ border-bottom-color: currentColor; }
 
-/* ========== Home Hero (index.html only) ========== */
+
+/* ===== HOME PAGE HERO (FULL BACKGROUND) ===== */
 .hero{
-  min-height: calc(100vh - var(--header-h));
-  padding: var(--ytop-hero) var(--xpad) var(--ybot);
-  display: block;
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   background:
     linear-gradient(rgba(255,240,180,.88), rgba(255,240,180,.88)),
     url("images/background.jpg") center / cover no-repeat fixed;
+
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
-.hero-content{ max-width: 920px; margin: 0 auto; }
-.hero h1{
-  margin: 0 0 12px;
-  font-size: clamp(2.8rem, 8vw, 5.2rem);
-  font-weight: 800;
+/* ===== HEADER FLOATS ON TOP OF HERO ===== */
+.site-header{
+  position: absolute;   /* <- this removes the white bar */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 16px var(--xpad);
+
+  background: transparent;  /* <- no white blur overlay */
+  border-bottom: none;
+}
+
+/* Center the hero text block */
+.hero-content{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 6vw;
 }
 .hero-subtitle{
   margin: 0 0 22px;
