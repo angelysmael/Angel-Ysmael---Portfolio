@@ -116,6 +116,11 @@ body:not(.home) .site-header {
   opacity: .95;
 }
 
+.hero-title,
+.hero-subtitle {
+  text-shadow: 0 2px 3px rgba(0,0,0,0.08);
+}
+
 
 .index-footer{
   position: absolute;
