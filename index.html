@@ -9,17 +9,20 @@
 <body>
   <!-- shared header/nav -->
 <header class="site-header">
-  <nav class="nav">
-    <div class="nav-left">
-      <span class="site-logo">AY</span>
-    </div>
-    <ul class="nav-list">
-      <li><a href="index.html" class="nav-link active" aria-current="page">about me!</a></li>
-      <li><a href="cp.html" class="nav-link">cp projects!</a></li>
-      <li><a href="vm.html" class="nav-link">vm projects!</a></li>
-      <li><a href="contact.html" class="nav-link">contact me!</a></li>
-    </ul>
-  </nav>
+<nav class="nav">
+  <div class="nav-left">
+    <span class="site-logo">AY</span>
+  </div>
+  <button id="theme-toggle" class="theme-toggle" type="button">
+    light mode
+  </button>
+  <ul class="nav-list">
+    <li><a href="index.html" class="nav-link active" aria-current="page">about me!</a></li>
+    <li><a href="cp.html" class="nav-link">cp projects!</a></li>
+    <li><a href="vm.html" class="nav-link">vm projects!</a></li>
+    <li><a href="contact.html" class="nav-link">contact me!</a></li>
+  </ul>
+</nav>
 </header>
 
 <main class="site-main">
@@ -83,6 +86,20 @@
   <footer class="site-footer">
     <p>2025 &copy; Angel Ysmael.</p>
   </footer>
+    <!-- small script for theme toggle -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const lightOn = document.body.classList.contains('light-theme');
+        themeToggle.textContent = lightOn ? 'dark mode' : 'light mode';
+      });
+    }
+  </script>
+</body>
+</html>
 </body>
 
   <script src="script.js" defer></script>
