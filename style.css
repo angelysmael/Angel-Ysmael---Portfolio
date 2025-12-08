@@ -29,7 +29,7 @@ body{
 
 /* ========== Header / Nav ========== */
 .site-header{
-  position: sticky;     /* keeps header visible when scrolling */
+  position: sticky;     
   top: 0;
   z-index: 10;
   padding: 16px var(--xpad);
@@ -82,14 +82,14 @@ body{
 
 /* ===== HEADER FLOATS ON TOP OF HERO ===== */
 .site-header{
-  position: absolute;   /* <- this removes the white bar */
+  position: absolute;   
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
   padding: 16px var(--xpad);
 
-  background: transparent;  /* <- no white blur overlay */
+  background: transparent; 
   border-bottom: none;
 }
 
