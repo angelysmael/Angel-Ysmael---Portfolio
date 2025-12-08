@@ -85,6 +85,20 @@ body:not(.home) .site-header {
   padding: 0;
   position: relative;
 }
+/* fade transition into next section */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,240,180,0) 0%,
+    #f5e3a3 100%
+  );
+}
 
 /* ===== HEADER FLOATS ON TOP OF HERO ===== */
 .site-header{
