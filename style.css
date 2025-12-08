@@ -166,6 +166,16 @@ body{
   cursor: pointer;
   font-weight: 600;
 }
+/* smooth hover polish for buttons */
+.btn,
+.toggle {
+  transition: background .25s ease, transform .25s ease;
+}
+
+.btn:hover,
+.toggle:hover {
+  transform: translateY(-2px);
+}
 .details{
   opacity: 0;
   max-height: 0;
