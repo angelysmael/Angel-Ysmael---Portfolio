@@ -206,3 +206,8 @@ textarea[aria-invalid="true"]{ outline: 2px solid #b00020; }
   .nav a{ font-size: .95rem; }
 }
 
+/* highlight the current page in nav */
+.nav-link.active {
+  border-bottom-color: currentColor;
+  opacity: 1;
+}
