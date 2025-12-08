@@ -150,6 +150,16 @@ body{
   padding: 1rem 1.2rem;
   box-shadow: 0 8px 20px rgba(0,0,0,.08);
 }
+
+/* card hover lift */
+.project-card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+}
 .card-head{
   display: flex;
   justify-content: space-between;
