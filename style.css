@@ -390,40 +390,25 @@ body:not(.home) .site-header {
   opacity: 1;
   max-height:
 }
-/* ========== CP + VM PAGES BACKGROUND ========== */
-
-/* light mode background for cp.html & vm.html */
+/* ========== CP + VM + CONTACT PAGES BACKGROUND ========== */
 body.cp-page,
-body.vm-page {
+body.vm-page,
+body.contact-page {
   background:
     linear-gradient(rgba(255,240,180,0.88), rgba(255,240,180,0.88)),
     url("images/background.jpg") center / cover no-repeat fixed;
 }
 
-/* dark mode background for cp.html & vm.html */
 body.dark-theme.cp-page,
-body.dark-theme.vm-page {
+body.dark-theme.vm-page,
+body.dark-theme.contact-page {
   background:
     linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.98)),
     url("images/background.jpg") center / cover no-repeat fixed;
 }
-
-/* make project cards readable on top of photo */
-body.cp-page .project-card,
-body.vm-page .project-card {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(6px);
-}
-
-body.dark-theme.cp-page .project-card,
-body.dark-theme.vm-page .project-card {
-  background: rgba(17, 24, 39, 0.8);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-/* cp & vm pages: header floats over the image */
 body.cp-page .site-header,
-body.vm-page .site-header {
+body.vm-page .site-header,
+body.contact-page .site-header {
   position: absolute;
   top: 0;
   left: 0;
@@ -432,11 +417,68 @@ body.vm-page .site-header {
   border-bottom: none;
 }
 
-/* cp & vm in dark mode */
 body.dark-theme.cp-page .site-header,
-body.dark-theme.vm-page .site-header {
+body.dark-theme.vm-page .site-header,
+body.dark-theme.contact-page .site-header {
   background: transparent;
   border-bottom: none;
+}
+
+/* ========== Contact Page Card & Form ========== */
+
+.contact-section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: #fff7cf;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  margin-top: 1.5rem;
+}
+
+body.contact-page .contact-card {
+  /* sit nicely on the image */
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+}
+
+body.dark-theme.contact-page .contact-card {
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0,0,0,0.25);
+  font: inherit;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid rgba(74, 51, 45, 0.6);
+  border-color: transparent;
+}
+
+.contact-submit {
+  margin-top: 0.25rem;
 }
 
 
