@@ -389,3 +389,14 @@ body:not(.home) .site-header {
 .details.show {
   opacity: 1;
   max-height:
+/* CP page background */
+body.cp-page {
+  background:
+    linear-gradient(rgba(255,240,180,0.88), rgba(255,240,180,0.88)),
+    url("images/background.jpg") center / cover no-repeat fixed;
+}
+body.dark-theme.cp-page {
+  background:
+    linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.95)),
+    url("images/background.jpg") center / cover no-repeat fixed;
+}
