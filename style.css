@@ -35,6 +35,56 @@ body {
   line-height: 1.35;
 }
 
+/* ========== Dark Theme ========== */
+body.dark-theme {
+  background: #111827;
+  color: #f9fafb;
+}
+
+body.dark-theme .site-header {
+  background: rgba(15,23,42,0.85);
+  border-bottom-color: rgba(148,163,184,0.5);
+}
+
+body.dark-theme .hero {
+  background:
+    linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9)),
+    url("images/background.jpg") center / cover no-repeat fixed;
+}
+
+body.dark-theme a {
+  color: #e5e7eb;
+}
+/* soft rounded theme toggle */
+.theme-toggle {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 2px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(6px);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 
+    background .25s ease,
+    border-color .25s ease,
+    transform .2s ease;
+  text-transform: lowercase;
+  color: var(--ink);
+}
+
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.75);
+  border-color: rgba(0,0,0,0.35);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+  background: rgba(255,255,255,0.5);
+}
+
+
 /* ========== Header / Nav ========== */
 
 /* default: hero page (home) header floats on top */
