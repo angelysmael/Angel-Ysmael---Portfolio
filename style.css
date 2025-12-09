@@ -416,4 +416,20 @@ body.dark-theme.cp-page .project-card {
   background: rgba(17, 24, 39, 0.8);
   border: 1px solid rgba(255,255,255,0.12);
 }
+/* cp page: header floats over the image */
+body.cp-page .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border-bottom: none;
+}
+
+/* cp page in dark mode */
+body.dark-theme.cp-page .site-header {
+  background: transparent;
+  border-bottom: none;
+}
+
 
