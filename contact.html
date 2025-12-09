@@ -4,48 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — Angel Ysmael</title>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="contact-page">
+
   <header class="site-header">
     <nav class="nav">
       <ul class="nav-list">
-        <li><a href="index.html">about me!</a></li>
-        <li><a href="cp.html">cp projects!</a></li>
-        <li><a href="vm.html">vm projects!</a></li>
-        <li><a href="contact.html">contact me!</a></li>
+        <li><a href="index.html" class="nav-link">about me!</a></li>
+        <li><a href="cp.html" class="nav-link">cp projects!</a></li>
+        <li><a href="vm.html" class="nav-link">vm projects!</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">contact me!</a></li>
       </ul>
     </nav>
   </header>
 
- <main class="page">
-    <section id="contact">
+  <main class="page">
+    <section class="contact-section">
       <h2 class="section-title">Contact Me</h2>
+      <p class="lead">
+        Have a question, project idea, or want to chat about tech &amp; visual merchandising?
+        Fill out this form and I’ll get back to you as soon as I can.
+      </p>
 
-      <form id="contact-form" novalidate>
-        <label> Name
-          <input id="name" name="name" type="text" required aria-describedby="name-err">
-        </label>
-        <p id="name-err" class="error" aria-live="polite"></p>
+      <!-- THIS is the card wrapper -->
+      <article class="contact-card">
+        <form class="contact-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
 
-        <label> Email
-          <input id="email" name="email" type="email" required aria-describedby="email-err">
-        </label>
-        <p id="email-err" class="error" aria-live="polite"></p>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
 
-        <label> Message
-          <textarea id="message" name="message" rows="5" required minlength="10" aria-describedby="message-err"></textarea>
-        </label>
-        <p id="message-err" class="error" aria-live="polite"></p>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
 
-        <button type="submit">Send</button>
-        <p id="form-status" aria-live="polite"></p>
-      </form>
+          <button type="submit" class="btn primary-btn contact-submit">
+            Send message
+          </button>
+        </form>
+      </article>
     </section>
   </main>
 
-  <footer>2025 Angel Ysmael.</footer>
-  <script src="script.js" defer></script>
+  <footer class="site-footer">
+    2025 &copy; Angel Ysmael.
+  </footer>
 </body>
 </html>
-

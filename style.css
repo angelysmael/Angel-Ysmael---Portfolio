@@ -440,7 +440,6 @@ body.dark-theme.contact-page .site-header {
 }
 
 body.contact-page .contact-card {
-  /* sit nicely on the image */
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
 }
@@ -480,6 +479,3 @@ body.dark-theme.contact-page .contact-card {
 .contact-submit {
   margin-top: 0.25rem;
 }
-
-
-
