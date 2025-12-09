@@ -479,3 +479,9 @@ body.dark-theme.contact-page .contact-card {
 .contact-submit {
   margin-top: 0.25rem;
 }
+.project-thumb {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0.75rem 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
