@@ -40,6 +40,17 @@ body.dark-theme {
   background: #111827;
   color: #f9fafb;
 }
+/* dark mode intro background */
+body.dark-theme .intro-section {
+  background: #111827; /* same as dark body */
+  color: #f9fafb;
+}
+body.dark-theme .intro-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #f9fafb;
+}
+
 
 body.dark-theme .site-header {
   background: rgba(15,23,42,0.85);
