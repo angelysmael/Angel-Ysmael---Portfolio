@@ -9,40 +9,43 @@
 <body class="home">
 
   <!-- shared header/nav -->
-<header class="site-header">
-<nav class="nav">
-  <div class="nav-left">
-  </div>
-  <button id="theme-toggle" class="theme-toggle" type="button">
-    light mode
-  </button>
-  <ul class="nav-list">
-    <li><a href="index.html" class="nav-link active" aria-current="page">about me!</a></li>
-    <li><a href="cp.html" class="nav-link">cp projects!</a></li>
-    <li><a href="vm.html" class="nav-link">vm projects!</a></li>
-    <li><a href="contact.html" class="nav-link">contact me!</a></li>
-  </ul>
-</nav>
-</header>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-left"></div>
 
-<main class="site-main">
-  <!-- Hero / intro section -->
-  <section id="about" class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Angel Ysmael</h1>
-      <h2 class="hero-subtitle">Computer Programming Student &amp; Visual Manager</h2>
-      <p class="hero-tagline">
-        I’m a computer programming student with a strong visual merchandising background.
-        I love building projects that combine clean design, data, and real store experience.
-      </p>
+      <!-- theme toggle button -->
+      <button id="theme-toggle" class="theme-toggle" type="button">
+        dark mode
+      </button>
 
-      <div class="hero-actions">
-        <a href="cp.html" class="btn primary-btn">see my cp projects</a>
-        <a href="vm.html" class="btn secondary-btn">see my vm work</a>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active" aria-current="page">about me!</a></li>
+        <li><a href="cp.html" class="nav-link">cp projects!</a></li>
+        <li><a href="vm.html" class="nav-link">vm projects!</a></li>
+        <li><a href="contact.html" class="nav-link">contact me!</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <!-- Hero / intro section -->
+    <section id="about" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Angel Ysmael</h1>
+        <h2 class="hero-subtitle">Computer Programming Student &amp; Visual Manager</h2>
+        <p class="hero-tagline">
+          I’m a computer programming student with a strong visual merchandising background.
+          I love building projects that combine clean design, data, and real store experience.
+        </p>
+
+        <div class="hero-actions">
+          <a href="cp.html" class="btn primary-btn">see my cp projects</a>
+          <a href="vm.html" class="btn secondary-btn">see my vm work</a>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- Quick overview / skills -->
+    </section>
+
+    <!-- Quick overview / skills -->
     <section class="intro-section">
       <h2>what you’ll find here</h2>
       <p>
@@ -80,28 +83,28 @@
         </article>
       </div>
     </section>
-</main>
-
+  </main>
 
   <footer class="site-footer">
     <p>2025 &copy; Angel Ysmael.</p>
   </footer>
-    <!-- small script for theme toggle -->
-<script>
-  const themeToggle = document.getElementById('theme-toggle');
 
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-
-    const darkOn = document.body.classList.contains('dark-theme');
-    themeToggle.textContent = darkOn ? 'light mode' : 'dark mode';
-  });
-</script>
-</body>
-</html>
-
-
+  <!-- (optional) your other JS file, if you use it -->
   <script src="script.js" defer></script>
+
+  <!-- theme toggle script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const themeToggle = document.getElementById('theme-toggle');
+      if (!themeToggle) return;
+
+      themeToggle.addEventListener('click', function () {
+        document.body.classList.toggle('dark-theme');
+
+        const darkOn = document.body.classList.contains('dark-theme');
+        themeToggle.textContent = darkOn ? 'light mode' : 'dark mode';
+      });
+    });
+  </script>
 </body>
 </html>
-
