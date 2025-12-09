@@ -119,6 +119,11 @@ body:not(.home) .site-header {
   margin: 0 auto;
   padding: 0 6vw;
 }
+/* home intro section (below hero) */
+.intro-section {
+  padding: 3rem var(--xpad) 4rem;
+  background: #f5e3a3; /* same as hero fade */
+}
 .hero-subtitle{
   margin: 0 0 22px;
   font-size: clamp(1.1rem, 2.7vw, 2rem);
@@ -133,6 +138,21 @@ body:not(.home) .site-header {
 .hero-title,
 .hero-subtitle {
   text-shadow: 0 2px 3px rgba(0,0,0,0.08);
+}
+
+/* fade transition into next section */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,240,180,0) 0%,
+    #f5e3a3 100%
+  );
 }
 
 
