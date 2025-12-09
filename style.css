@@ -66,6 +66,16 @@ body.dark-theme .hero {
 body.dark-theme a {
   color: #e5e7eb;
 }
+
+/* dark mode hero fade fix */
+body.dark-theme .hero::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(17,24,39,0) 0%,   /* transparent */
+    rgba(17,24,39,1) 100%  /* full dark navy */
+  );
+}
+
 /* soft rounded theme toggle */
 .theme-toggle {
   padding: 0.45rem 1rem;
