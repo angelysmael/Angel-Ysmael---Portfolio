@@ -66,7 +66,34 @@ body:not(.home) .site-header {
 .nav a:hover,
 .nav a:focus{ border-bottom-color: currentColor; }
 
+/* soft rounded theme toggle */
+.theme-toggle {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 2px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(6px);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 
+    background .25s ease,
+    border-color .25s ease,
+    transform .2s ease;
+  text-transform: lowercase;
+  color: var(--ink);
+}
 
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.75);
+  border-color: rgba(0,0,0,0.35);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+  background: rgba(255,255,255,0.5);
+}
 /* ===== HOME PAGE HERO (FULL BACKGROUND) ===== */
 .hero{
   min-height: 100vh;
